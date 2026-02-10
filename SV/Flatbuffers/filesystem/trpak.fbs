@@ -1,6 +1,6 @@
 namespace Titan.FileSystem;
 
-enum EncryptType : int8 {
+enum CompressionType : int8 {
     None = -1,
     Zlib = 1,
     Lz4 = 2,
@@ -9,7 +9,7 @@ enum EncryptType : int8 {
 
 table FileEntry {
     res_0: uint32;
-    encrypt_type: EncryptType = -1;
+    compress_type: CompressionType = -1;
     unk_2: uint8;
     file_size: uint64;
     byte_buffer: [uint8];
